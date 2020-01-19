@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MediaQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font: 16px Helvetica Arial;
+        }
+        
+        .container {
+            width: 90%;
+            margin: 0 5%;
+        }
+        
+        .header-container,
+        .footer-page-container,
+        .principal aside {
+            background: #f15629;
+        }
+        
+        .title {
+            color: white;
+        }
+        
+        nav li:first-child a {
+            margin-left: 0;
+        }
+        
+        nav li:last-child a {
+            margin-left: 0;
+        }
+        
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            list-style-image: none;
+        }
+        
+        nav a:hover,
+        nav a:visited {
+            color: white;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        nav a {
+            display: block;
+            float: left;
+            width: 27%;
+            margin: 0 1.5%;
+            padding: 25px 2%;
+            margin-bottom: 0;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            background: #e44d26;
+        }
+        
+        .principal {
+            padding: 30px 0;
+        }
+        
+        .principal article h1 {
+            font-size: 2em;
+        }
+        
+        .footer-page-container footer {
+            color: white;
+            padding: 20px 0;
+        }
+        
+        .principal aside {
+            color: white;
+        }
+        
+        .clean:before,
+        .clean:after {
+            content: "";
+            display: table;
+        }
+        
+        .clean:after {
+            clear: both;
+        }
+        /*large screen*/
+        
+        @media only screen and (min-width: 1024px) {
+            .container {
+                width: 1026px;
+                margin: 0 auto;
+            }
+            .header-container,
+            .footer-page-container,
+            .principal aside {
+                background: black;
+            }
+            .title {
+                float: left;
+            }
+            nav {
+                float: right;
+                width: 38%;
+            }
+            .principal article {
+                float: left;
+                width: 45%;
+            }
+            .principal aside {
+                float: right;
+                width: 28%;
+                padding: 0px 5% 10px;
+            }
+            .responsive-img {
+                width: 100%;
+                max-width: 100px;
+                height: auto;
+            }
+            .description {
+                float: left;
+                width: 38%;
+            }
+        }
+        /*Fin screen*/
+        /*large screen*/
+        
+        @media only screen and (min-width: 769px) and (max-width: 1023px) {
+            .container {
+                width: 700px;
+                margin: 0 auto;
+            }
+            .header-contendor,
+            .principal aside {
+                -webkit-box-shadow: 0 5px 10px #aaa;
+                -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+            }
+            .header-container,
+            .footer-page-container,
+            .principal aside {
+                background: blue;
+            }
+            .title {
+                float: left;
+            }
+            nav {
+                float: right;
+                width: 48%;
+            }
+            .principal article {
+                float: left;
+                width: 45%;
+            }
+            .principal aside {
+                float: right;
+                width: 28%;
+                padding: 0px 5% 10px;
+            }
+        }
+        /*Fin Desktop*/
+        /*Inicio Tablet*/
+        
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
+            .header-contendor,
+            .principal aside {
+                -webkit-box-shadow: 0 5px 10px #aaa;
+                -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+            }
+            .container {
+                width: 739px;
+                margin: 0 auto;
+            }
+            .title {
+                float: left;
+            }
+            nav {
+                float: right;
+                width: 38%;
+            }
+            .principal article {
+                float: left;
+                width: 57%;
+            }
+            .principal aside {
+                float: right;
+                width: 28%;
+                padding: 0px 5% 10px;
+            }
+        }
+        /*Fin Tablet*/
+        /*Inicio Movil*/
+        
+        @media only screen and (min-width: 0px) and (max-width: 480px) {
+            .header-contendor,
+            .principal aside {
+                -webkit-box-shadow: 0 5px 10px #aaa;
+                -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+            }
+            .header-container,
+            .footer-page-container,
+            .principal aside {
+                background: red;
+            }
+            nav a {
+                margin: 0 0 10px 0;
+                padding: 15px 0;
+                width: 100%;
+            }
+            .principal aside {
+                padding: 5px 5px 5px 10px;
+            }
+        }
+        /*Fin Movil*/
+    </style>
+</head>
+
+<body>
+    <div class="header-container">
+        <header class="container clean">
+            <h1 class="title">Previews</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Index</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="principal container clean">
+        <header>
+            <h1>You can find some trailers here!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime numquam architecto iure eius odio iste minima dolores enim eos exercitationem eveniet expedita quisquam explicabo, adipisci et laborum odit suscipit labore!</p>
+        </header>
+        <article>
+            <section>
+                <h2>Article 1</h2>
+                <div class="description">
+                    <img src="img/the_avengers.png" class="responsive-img" alt="">
+                </div>
+
+                <div class="description">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis itaque suscipit saepe quae culpa soluta tempora? Officiis, nihil non. Nam ut atque rem cumque minima quis molestias aliquid! Numquam, delectus.</p>
+                </div>
+            </section>
+        </article>
+        <article>
+            <section>
+                <h2>Article 2</h2>
+                <div class="description">
+                    <img src="img/avengers-ultron.jpg" class="responsive-img" alt="">
+                </div>
+
+                <div class="description">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis itaque suscipit saepe quae culpa soluta tempora? Officiis, nihil non. Nam ut atque rem cumque minima quis molestias aliquid! Numquam, delectus.</p>
+                </div>
+            </section>
+        </article>
+        <article>
+            <section>
+                <h2>Article 3</h2>
+                <div class="description">
+                    <img src="img/avengers-civil-war.jpeg" class="responsive-img" alt="">
+                </div>
+
+                <div class="description">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis itaque suscipit saepe quae culpa soluta tempora? Officiis, nihil non. Nam ut atque rem cumque minima quis molestias aliquid! Numquam, delectus.</p>
+                </div>
+            </section>
+        </article>
+        <article>
+            <section>
+                <h2>Article 4</h2>
+                <div class="description">
+                    <img src="img/avengers-endgame.jpg" class="responsive-img" alt="">
+                </div>
+
+                <div class="description">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis itaque suscipit saepe quae culpa soluta tempora? Officiis, nihil non. Nam ut atque rem cumque minima quis molestias aliquid! Numquam, delectus.</p>
+                </div>
+            </section>
+        </article>
+
+
+
+    </div>
+    <div class="footer-page-container">
+        <footer class="container">
+            <h3>Footer</h3>
+        </footer>
+    </div>
+</body>
+
+</html>
