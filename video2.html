@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VideoScreen</title>
+    <style>
+        html,
+        body {
+            background-color: black;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        @media screen and (orientation:portrait) {
+            /* // CSS applied when the device is in portrait mode */
+            body {
+                height: 100vw;
+                transform: rotate(90deg);
+            }
+            video {
+                background: black;
+                width: 100vh;
+                height: 100vw;
+            }
+        }
+        
+        @media screen and (orientation:landscape) and (min-width: 1024px) {
+            /* // CSS applied when the device is in landscape mode */
+            body {
+                height: 100vw;
+            }
+            video {
+                height: 100%;
+            }
+        }
+        
+        @media screen and (orientation:landscape) and (min-width: 1024px) {
+            /* // CSS applied when the device is in landscape mode */
+            body {
+                height: 100%;
+            }
+            video {
+                width: 100%;
+            }
+        }
+        
+        @media screen and (orientation:landscape) and (min-width: 769px) and (max-width: 1023px) {
+            */
+            /* // CSS applied when the device is in landscape mode */
+            body {
+                height: auto;
+            }
+            video {
+                width: 100%;
+            }
+        }
+        
+        @media screen and (orientation:landscape) and (min-width: 481px) and (max-width: 768px) {
+            */
+            /* // CSS applied when the device is in landscape mode */
+            body {
+                height: auto;
+            }
+            video {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        @media screen and (orientation:landscape) and (min-width: 0px) and (max-width: 480px) {
+            */
+            /* // CSS applied when the device is in landscape mode */
+            body {
+                height: auto;
+            }
+            video {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+
+</head>
+
+<body onresize="changeWidth()" onload="changeWidth()">
+
+    <video autoplay>
+    <source src="video/avengers_ultron.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+</body>
+
+</html>

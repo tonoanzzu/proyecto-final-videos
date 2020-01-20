@@ -9,18 +9,12 @@
     <style>
         body {
             margin: 0;
-            font: 16px Helvetica Arial;
+            font: 18px Helvetica Arial;
         }
         
         .container {
             width: 90%;
             margin: 0 5%;
-        }
-        
-        .header-container,
-        .footer-page-container,
-        .principal aside {
-            background: #f15629;
         }
         
         .title {
@@ -49,20 +43,6 @@
         
         nav a:hover {
             text-decoration: underline;
-        }
-        
-        nav a {
-            display: block;
-            float: left;
-            width: 27%;
-            margin: 0 1.5%;
-            padding: 25px 2%;
-            margin-bottom: 0;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            color: white;
-            background: #e44d26;
         }
         
         .principal {
@@ -102,6 +82,23 @@
             .footer-page-container,
             .principal aside {
                 background: black;
+            }
+            nav a {
+                display: block;
+                float: left;
+                width: 27%;
+                margin: 0 1.5%;
+                padding: 25px 2%;
+                margin-bottom: 0;
+                text-align: center;
+                text-decoration: none;
+                font-weight: bold;
+                color: white;
+                background: #242424;
+            }
+            nav a:hover,
+            nav a:visited {
+                color: white;
             }
             .title {
                 float: left;
@@ -155,6 +152,19 @@
                 float: right;
                 width: 48%;
             }
+            nav a {
+                display: block;
+                float: left;
+                width: 27%;
+                margin: 0 1.5%;
+                padding: 25px 2%;
+                margin-bottom: 0;
+                text-align: center;
+                text-decoration: none;
+                font-weight: bold;
+                color: white;
+                background: rgb(75, 75, 255);
+            }
             .principal article {
                 float: left;
                 width: 45%;
@@ -163,6 +173,15 @@
                 float: right;
                 width: 28%;
                 padding: 0px 5% 10px;
+            }
+            .responsive-img {
+                width: 100%;
+                max-width: 80px;
+                height: auto;
+            }
+            .description {
+                float: left;
+                width: 45%;
             }
         }
         /*Fin Desktop*/
@@ -176,8 +195,13 @@
                 box-shadow: 0 5px 10px #aaa;
             }
             .container {
-                width: 739px;
+                width: 410px;
                 margin: 0 auto;
+            }
+            .header-container,
+            .footer-page-container,
+            .principal aside {
+                background: #f15629;
             }
             .title {
                 float: left;
@@ -186,14 +210,35 @@
                 float: right;
                 width: 38%;
             }
+            nav a {
+                display: block;
+                float: left;
+                margin: 0 1.5%;
+                padding: 25px 2%;
+                margin-bottom: 0;
+                text-align: center;
+                text-decoration: none;
+                font-weight: bold;
+                color: white;
+                background: #f15629;
+            }
             .principal article {
                 float: left;
-                width: 57%;
+                width: 100%;
             }
             .principal aside {
                 float: right;
                 width: 28%;
                 padding: 0px 5% 10px;
+            }
+            .responsive-img {
+                width: 100%;
+                max-width: 80px;
+                height: auto;
+            }
+            .description {
+                float: left;
+                width: 38%;
             }
         }
         /*Fin Tablet*/
@@ -215,9 +260,31 @@
                 margin: 0 0 10px 0;
                 padding: 15px 0;
                 width: 100%;
+                display: block;
+                float: left;
+                margin-bottom: 0;
+                text-align: center;
+                text-decoration: none;
+                font-weight: bold;
+                color: white;
+                background: red;
             }
             .principal aside {
                 padding: 5px 5px 5px 10px;
+            }
+            .responsive-img {
+                width: 100%;
+                max-width: 80px;
+                height: auto;
+            }
+            .description {
+                float: left;
+                width: 100%;
+                text-align: center;
+            }
+            section {
+                text-align: center;
+                padding-top: 15px;
             }
         }
         /*Fin Movil*/
@@ -245,9 +312,10 @@
             <section>
                 <h2>Article 1</h2>
                 <div class="description">
-                    <img src="img/the_avengers.png" class="responsive-img" alt="">
+                    <a href="video1.html">
+                        <img src="img/the_avengers.png" class="responsive-img" alt="">
+                    </a>
                 </div>
-
                 <div class="description">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis itaque suscipit saepe quae culpa soluta tempora? Officiis, nihil non. Nam ut atque rem cumque minima quis molestias aliquid! Numquam, delectus.</p>
                 </div>
@@ -257,9 +325,10 @@
             <section>
                 <h2>Article 2</h2>
                 <div class="description">
-                    <img src="img/avengers-ultron.jpg" class="responsive-img" alt="">
+                    <a href="video2.html">
+                        <img src="img/avengers-ultron.jpg" class="responsive-img" alt="">
+                    </a>
                 </div>
-
                 <div class="description">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis itaque suscipit saepe quae culpa soluta tempora? Officiis, nihil non. Nam ut atque rem cumque minima quis molestias aliquid! Numquam, delectus.</p>
                 </div>
@@ -269,9 +338,10 @@
             <section>
                 <h2>Article 3</h2>
                 <div class="description">
-                    <img src="img/avengers-civil-war.jpeg" class="responsive-img" alt="">
+                    <a href="video3.html">
+                        <img src="img/infinity_war.jpeg" class="responsive-img" alt="">
+                    </a>
                 </div>
-
                 <div class="description">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis itaque suscipit saepe quae culpa soluta tempora? Officiis, nihil non. Nam ut atque rem cumque minima quis molestias aliquid! Numquam, delectus.</p>
                 </div>
@@ -281,21 +351,19 @@
             <section>
                 <h2>Article 4</h2>
                 <div class="description">
-                    <img src="img/avengers-endgame.jpg" class="responsive-img" alt="">
+                    <a href="video4.html">
+                        <img src="img/avengers-endgame.jpg" class="responsive-img" alt="">
+                    </a>
                 </div>
-
                 <div class="description">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis itaque suscipit saepe quae culpa soluta tempora? Officiis, nihil non. Nam ut atque rem cumque minima quis molestias aliquid! Numquam, delectus.</p>
                 </div>
             </section>
         </article>
-
-
-
     </div>
     <div class="footer-page-container">
         <footer class="container">
-            <h3>Footer</h3>
+            <h3></h3>
         </footer>
     </div>
 </body>
